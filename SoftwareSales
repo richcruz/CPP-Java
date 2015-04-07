@@ -1,0 +1,107 @@
+/**
+   * SoftwareSales class, Phase 1
+   * Under Construction!
+   * Programmed by R. Cruz (CSC161)
+   * Sunday, March 29th, 2015
+   
+   */
+import java.util.Scanner;   
+ 
+public class SoftwareSales
+{
+Scanner Keyboard = new Scanner(System.in);
+    private int items;
+    private double price;
+    
+public void SoftwareSales (int inputItems, double inputPrice)   //holders Constructor Method
+   {
+       items = inputItems;
+       price = inputPrice;
+       
+   }
+
+    /**
+     * below are the mutator methods.  Set to void because no change is being made
+     */
+    
+    
+    public void setItems(int inputItems, double inputPrice)
+    {
+        items = inputItems;
+        price = inputPrice;
+    }    
+   
+    /**
+   * get****() returns a copy of the value of the strings and int above
+   */
+   
+    public int getItems() // Accessor Method
+   {
+       return  items;  //sends back a value to the caller
+       return price;
+   }
+public double setPrice()
+{
+price = 99.00;
+return price;
+}
+
+    
+public double setPriceWithDiscount()
+
+{
+	double amount;
+	double amountDiscount;
+   int number;
+	
+	if (items <= 0)
+	
+		System.out.print ("Nothing to Calculate");
+	
+	else if (items > 1 && items < 10)
+	{
+		amountDiscount = 0;
+		amount = price * items;
+      System.out.print ("You owe $" + amount);
+
+	}
+	else if (items >= 10 && items < 20)
+	{
+		amountDiscount = price - (price * .20);
+		amount = items * amountDiscount;
+      System.out.print ("You owe $" + amount);
+      
+	}
+	else if (items >= 20 && items < 50)
+	{
+		amountDiscount = price - (price * .30);
+		amount = items * amountDiscount;
+      System.out.print ("You owe $" + amount);
+	}
+	else if (items >= 50 && items < 100)
+	{
+		amountDiscount = price - (price * .40);
+		amount = items * amountDiscount;
+      System.out.print ("You owe $" + amount);
+	}
+	else
+	{
+		amountDiscount = price - (price * .50);
+		amount = items * amountDiscount;
+      System.out.print ("You owe $" + amount);
+	}
+	return 0;
+		}
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
